@@ -27,7 +27,7 @@ class SimpleLinkListTest {
 
     @Test
     void traverse() {
-        simpleLinkList.traverse();
+//        simpleLinkList.traverse();
         System.out.println(simpleLinkList);
     }
 }

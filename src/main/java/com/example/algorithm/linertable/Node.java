@@ -16,19 +16,11 @@ public class Node {
         this.next = next;
     }
 
-    public Object getData() {
+    public int getData() {
         return data;
     }
 
     public void setData(int data) {
         this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return "Node{" +
-                "next=" + next +
-                ", data=" + data +
-                '}';
     }
 }

@@ -1,5 +1,7 @@
 package com.example.algorithm.linertable;
 
+import ch.qos.logback.classic.pattern.ClassOfCallerConverter;
+
 public class SimpleLinkList {
     private Node node;
 
@@ -17,22 +19,24 @@ public class SimpleLinkList {
         return true;
     }
 
-    // 遍历
-    public void traverse() {
+    // 删除
+    public void delete(int value) {
         if (this.node == null) {
-            return;
+            if (this.node.getData() == value) {
+                this.node = null;
+                return;
+            }
         }
-        Node localNode = this.node;
+        Node localNode = null;
         while (localNode.getNext() != null) {
-            System.out.println(localNode);
             localNode = localNode.getNext();
         }
+
     }
+
 
     @Override
     public String toString() {
-        return "SimpleLinkList{" +
-                "node=" + node +
-                '}';
+        return "SimpleLinkList{" + "node=" + node + '}';
     }
 }
